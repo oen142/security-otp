@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView
 @EnableWebMvc
 class WebMvcConfiguration : WebMvcConfigurer {
 
-    @Bean
+    @Bean(name = ["jsonView"])
     fun mappingJackson2JsonView(): MappingJackson2JsonView {
         val mappingJackson2JsonView = MappingJackson2JsonView()
         mappingJackson2JsonView.contentType = "application/json;charset=UTF-8"
